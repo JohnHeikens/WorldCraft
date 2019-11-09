@@ -1,0 +1,166 @@
+constexpr int dir8x[8]{ 1,1,0,-1,-1,-1,0,1 };//the eight directions(x coördinate, counterclockwise)
+constexpr int dir8y[8]{ 0,1,1,1,0,-1,-1,-1 };//the eight directions(y coördinate, counterclockwise)
+
+void PlaceOakTree(int x, int y, int z, bool addaction)
+{
+	int TrunkHeight = rand() % 3 + 2;
+	int TrunkTopZ = z + TrunkHeight;
+	int woodtopz = TrunkTopZ + rand() % 4;
+	SetBlockRange(x, y, z, x + 1, y + 1, woodtopz, OakWood, addaction);//trunk
+	for (int az = TrunkTopZ; az < woodtopz; az++) {
+		int branchcount = rand() % 4 == 0 ? 0 : 1;
+		//place branches
+		for (int i = 0; i < branchcount; i++)
+		{
+			int direction = rand() % 8;//the direction of the branch
+			int length = rand() % 3 + 1;
+			const int stepx = dir8x[direction];
+			const int stepy = dir8y[direction];
+			int ax = x, ay = y;
+			for (int j = 1; j <= length; j++)
+			{
+				ax += stepx;
+				ay += stepy;
+				SetBlock(ax, ay, az, OakWood, addaction);
+			}
+			//leaves on the end of the branch
+			SetSphere(ax, ay, az, randfp() * 2, Leaves, addaction);
+		}
+	}
+	//leaves on top of main branch
+	SetSphere(x, y, woodtopz, 2.5, Leaves, addaction);
+}
+void PlacePalmTree(int x, int y, int z, bool addaction)
+{
+	int TrunkHeight = rand() % 3 + 3;
+	int TrunkTopZ = z + TrunkHeight;
+	SetBlockRange(x, y, z, x + 1, y + 1, TrunkTopZ, PalmWood, addaction);
+
+	//cross
+	SetBlock(x - 2, y, TrunkTopZ, Leaves, addaction);//x row
+	SetBlock(x - 1, y, TrunkTopZ, Leaves, addaction);
+	SetBlock(x + 1, y, TrunkTopZ, Leaves, addaction);
+	SetBlock(x + 2, y, TrunkTopZ, Leaves, addaction);
+	SetBlockRange(x, y - 2, TrunkTopZ, x + 1, y + 3, TrunkTopZ + 1, Leaves, addaction);//y row
+	//top leaf
+	SetBlock(x, y, TrunkTopZ + 1, Leaves, addaction);
+	//hanging leaves
+	int LeafHeight = TrunkTopZ - 1;
+	SetBlock(x - 3, y, LeafHeight, Leaves, addaction);
+	SetBlock(x, y - 3, LeafHeight, Leaves, addaction);
+	SetBlock(x + 3, y, LeafHeight, Leaves, addaction);
+	SetBlock(x, y + 3, LeafHeight, Leaves, addaction);
+}
+//best height: 2
+void PlaceSpruceTree(int x, int y, int z, bool addaction)
+{
+	int TrunkHeight = rand() % 3 + 1;
+	int TrunkTopZ = z + TrunkHeight + 3;
+	SetBlockRange(x, y, z, x + 1, y + 1, TrunkTopZ, OakWood, addaction);
+
+	//top cross
+	SetBlock(x - 1, y, TrunkTopZ, Leaves, addaction);//x row
+	SetBlock(x + 1, y, TrunkTopZ, Leaves, addaction);
+	SetBlock(x, y - 1, TrunkTopZ, Leaves, addaction);//y row
+	SetBlock(x, y, TrunkTopZ, Leaves, addaction);
+	SetBlock(x, y + 1, TrunkTopZ, Leaves, addaction);
+	//top leaf
+	SetBlock(x, y, TrunkTopZ + 1, Leaves, addaction);
+	//circles of leaves
+	//small circle
+	int SmallCircleHeight = TrunkTopZ - 2;
+	SetBlock(x - 1, y, SmallCircleHeight, Leaves, addaction);//cross
+	SetBlock(x, y - 1, SmallCircleHeight, Leaves, addaction);
+	SetBlock(x + 1, y, SmallCircleHeight, Leaves, addaction);
+	SetBlock(x, y + 1, SmallCircleHeight, Leaves, addaction);
+	//big circle
+	int BigCircleHeight = TrunkTopZ - 3;
+	SetBlockRange(x - 2, y - 1, BigCircleHeight, x, y + 2, BigCircleHeight + 1, Leaves, addaction);//-x
+	SetBlockRange(x + 1, y - 1, BigCircleHeight, x + 3, y + 2, BigCircleHeight + 1, Leaves, addaction);//+x
+	SetBlockRange(x - 1, y - 2, BigCircleHeight, x + 2, y - 1, BigCircleHeight + 1, Leaves, addaction);//-y
+	SetBlockRange(x - 1, y + 2, BigCircleHeight, x + 2, y + 3, BigCircleHeight + 1, Leaves, addaction);//+y
+	SetBlock(x, y - 1, BigCircleHeight, Leaves, addaction);//fitting block: -y
+	SetBlock(x, y + 1, BigCircleHeight, Leaves, addaction);//fitting block: +y
+}
+void PlaceCactus(int x, int y, int z, bool addaction)
+{
+	int TrunkHeight = rand() % 3 + 2;
+	SetBlockRange(x, y, z, x + 1, y + 1, z + TrunkHeight, CactusBlock, addaction);
+}
+//tall spruce
+void PlacePineTree(int x, int y, int z, bool addaction)
+{
+	const int TrunkHeight = rand() % 5 + 5;//high trunks
+	const int TrunkTopZ = z + TrunkHeight;
+	const int LeaveLayers = 4;//4 layers of leaves
+	const int TrunkBottomZ = TrunkTopZ - LeaveLayers + 1;
+	//set wood
+	SetBlockRange(x, y, z, x + 1, y + 1, TrunkTopZ + 1, OakWood, addaction);
+	//set leaves
+	//-x
+	SetBlockRange(x - 1, y - 1, TrunkBottomZ, x, y + 2, TrunkTopZ + 1, Leaves, addaction);
+	//+x
+	SetBlockRange(x + 1, y - 1, TrunkBottomZ, x + 2, y + 2, TrunkTopZ + 1, Leaves, addaction);
+	//-y
+	SetBlockRange(x, y - 1, TrunkBottomZ, x + 1, y, TrunkTopZ + 1, Leaves, addaction);
+	//+y
+	SetBlockRange(x, y + 1, TrunkBottomZ, x + 1, y + 2, TrunkTopZ + 1, Leaves, addaction);
+	//top block
+	SetBlock(x, y, TrunkTopZ + 1, Leaves, addaction);
+}
+//https://minecraft.gamepedia.com/Tree
+//https://github.com/ferreusveritas/DynamicTrees/wiki/World-generation
+void PlaceBirchTree(int x, int y, int z, bool addaction)
+{
+	int TrunkHeight = rand() % 3 + 2;
+	int bottomz = z + TrunkHeight;
+	int TrunkTopZ = bottomz + 3;
+	//trunk
+	SetBlockRange(x, y, z, x + 1, y + 1, TrunkTopZ, BirchWood, addaction);
+
+	//layer 1
+	//-y
+	SetBlock(x, y - 1, bottomz + 3, Leaves, addaction);
+	//+y
+	SetBlock(x, y + 1, bottomz + 3, Leaves, addaction);
+	//x
+	SetBlockRange(x - 1, y, bottomz + 3, x + 2, y + 1, bottomz + 4, Leaves, addaction);
+
+	//layer 2
+	//-y
+	SetBlockRange(x - 1, y - 1, bottomz + 2, x + 2, y, bottomz + 3, Leaves, addaction);
+	//+y
+	SetBlockRange(x - 1, y + 1, bottomz + 2, x + 2, y + 2, bottomz + 3, Leaves, addaction);
+	//-x
+	SetBlock(x - 1, y, bottomz + 2, Leaves, addaction);
+	//+x
+	SetBlock(x + 1, y, bottomz + 2, Leaves, addaction);
+
+	//layer 3
+	//-x
+	SetBlockRange(x - 2, y - 1, bottomz + 1, x, y + 2, bottomz + 2, Leaves, addaction);
+	//+x
+	SetBlockRange(x + 1, y - 1, bottomz + 1, x + 3, y + 2, bottomz + 2, Leaves, addaction);
+	//-y
+	SetBlockRange(x - 1, y - 2, bottomz + 1, x + 2, y - 1, bottomz + 2, Leaves, addaction);
+	//fitting block
+	SetBlock(x, y - 1, bottomz + 1, Leaves, addaction);
+	//+y
+	SetBlockRange(x - 1, y + 2, bottomz + 1, x + 2, y + 3, bottomz + 2, Leaves, addaction);
+	//fitting blocks:
+	//+y
+	SetBlock(x, y + 1, bottomz + 2, Leaves, addaction);
+	//-y
+	SetBlock(x, y - 1, bottomz + 2, Leaves, addaction);
+
+	//layer 4
+	//-x
+	SetBlockRange(x - 2, y - 2, bottomz, x, y + 3, bottomz + 1, Leaves, addaction);
+	//+x
+	SetBlockRange(x + 1, y - 2, bottomz, x + 3, y + 3, bottomz + 1, Leaves, addaction);
+	//y
+	SetBlock(x, y - 2, bottomz, Leaves, addaction);
+	SetBlock(x, y - 1, bottomz, Leaves, addaction);
+	SetBlock(x, y + 1, bottomz, Leaves, addaction);
+	SetBlock(x, y + 2, bottomz, Leaves, addaction);
+}

@@ -1,0 +1,22 @@
+constexpr int dir8x[8]{ 1,1,0,-1,-1,-1,0,1 };//the eight directions(x coördinate, counterclockwise)
+constexpr int dir8y[8]{ 0,1,1,1,0,-1,-1,-1 };//the eight directions(y coördinate, counterclockwise)
+
+void PlaceVillage(int x, int y, int z, bool addaction)
+{
+	//house
+	int housewidth = rand() % 5 + 4;
+	int housewidth2 = housewidth / 2;
+	int househeight = rand() % 3 + 5;
+	int z2 = z + househeight;
+	//walls
+	setblockrange(x - housewidth2, y - housewidth2, z, (x - housewidth2) + 1, y + housewidth2 + 1, z2 + 1, bricks, addaction);//order of calculations
+	setblockrange(x + housewidth2, y - housewidth2, z, x + housewidth2 + 1, y + housewidth2 + 1, z2 + 1, bricks, addaction);
+	setblockrange(x - housewidth2, y - housewidth2, z, x + housewidth2 + 1, (y - housewidth2) + 1, z2 + 1, bricks, addaction);//order of calculations
+	setblockrange(x - housewidth2, y + housewidth2, z, x + housewidth2 + 1, y + housewidth2 + 1, z2 + 1, bricks, addaction);
+	
+	
+}
+void start()
+{
+	setblockrange(-5,-5,0,5,5,100,lava, true);
+}

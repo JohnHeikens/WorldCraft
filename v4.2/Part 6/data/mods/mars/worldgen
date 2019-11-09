@@ -1,0 +1,35 @@
+//sealevel, texture size
+world settings:
+64,128
+
+//min, max, power, frequency, octave count
+//octave weights
+elevation noise:
+0, 1, 2, 0.004, 6
+1, .5f, .25f, .125f, .06125f, .036125f
+moisture noise:
+0, 1, 1, 0.004,6
+1, .75f, .33f, .33f, .33f, .5f
+biomes:
+	hilly
+
+biome colors:
+    rgb(255,0,0)		//hilly
+
+artifact name:
+artifact chance:
+	
+top blocks:
+	stone			//hilly
+	
+layer blocks:
+	stone			//hilly
+major blocks:
+//ground, water, air
+Stone, Stone, Air
+	//other resources
+other files:
+	blocks
+	artifacts
+	biomes.bmp
+	hd3.bmp

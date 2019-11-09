@@ -1,0 +1,43 @@
+//sealevel
+world settings:
+25
+
+//min, max, power, frequency, octave count
+//octave weights
+elevation noise:
+0.05, 0.15, 1, 0.004, 6
+1, .5f, .25f, .125f, .06125f, .036125f
+moisture noise:
+0, 1, 1, 0.004,6
+1, .75f, .33f, .33f, .33f, .5f
+biomes:
+	lake
+	forest
+
+biome colors:
+    rgb(0,0,255)		//lake
+	rgb(0,255,0)		//forest
+
+artifact name:
+village
+artifact chance:
+//village
+0//lake
+1//forest
+	
+top blocks:
+	Sand			//lake
+    Grass			//forest
+	
+layer blocks:
+	Dirt			//lake
+	Dirt			//forest
+major blocks:
+//ground, ocean, air
+Stone, Water, Air
+	//other resources
+other files:
+	blocks
+	artifacts
+	biomes.bmp
+	hd3.bmp

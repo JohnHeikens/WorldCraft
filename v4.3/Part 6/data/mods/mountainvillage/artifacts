@@ -1,0 +1,45 @@
+void PlaceHouse(int x, int y, int z, bool addaction)
+{
+	//walls
+	int height = 4;
+	int width = 5 + rand() % 12;
+	int length = 5 + rand() % 12;
+	int minx = x - width / 2;
+	int miny = y - length / 2;
+	int maxx = minx + width;
+	int maxy = miny + length;
+	int maxz = z + height;
+
+	bool houseabove = false;
+	//check for other houses
+	for(int i = z - height; i < maxz && (!houseabove);i++)
+	{
+		int b = getblock(x,y,i);
+		if(b == birchplanks)
+		{
+			houseabove = true;
+		}
+	}
+	if(houseabove)
+	{
+		setblock(x,y,z,lava,false);
+	}
+	if(!houseabove)
+	{
+	setblockrange(minx,miny,z,maxx + 1, maxy + 1,z + 1, birchplanks,false);//floor
+	setblockrange(minx,miny,maxz,maxx + 1, maxy + 1,maxz + 1, palmplanks,false);//roof
+	
+	setblockrange(minx + 1,miny + 1,z + 1,maxx, maxy,maxz, air,false);//inside
+	
+	setblockrange(minx,miny,z + 1,minx + 1, maxy + 1,maxz, palmwood, false);//wall minx
+	setblockrange(maxx,miny,z + 1,maxx + 1, maxy + 1,maxz, palmwood, false);//wall maxx
+	setblockrange(minx,miny,z + 1,maxx + 1, miny + 1,maxz, palmwood, false);//wall miny
+	setblockrange(minx,maxy,z + 1,maxx + 1, maxy + 1,maxz, palmwood, false);//wall maxy
+	
+	
+	
+	//one door at a random side of the building
+	
+	
+	}
+}

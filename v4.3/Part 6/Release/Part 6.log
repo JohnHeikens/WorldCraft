@@ -1,0 +1,36 @@
+﻿  game.cpp
+C:\Users\Gebruiker\Documents\GitHub\include\include\graphics.h(128,26): warning C4244: 'argument': conversion from 'cfp' to 'cbyte', possible loss of data
+C:\Users\Gebruiker\Documents\GitHub\include\include\hsf.h(32,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Gebruiker\Documents\GitHub\include\include\function.h(54,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Gebruiker\Documents\GitHub\WorldCraft\v4.3\Part 6\WorldConstants.h(509,2): warning C4091: 'static ': ignored on left of 'world' when no variable is declared
+C:\Users\Gebruiker\Documents\GitHub\WorldCraft\v4.3\Part 6\WorldConstants.h(378,7): warning C4101: 'total': unreferenced local variable
+C:\Users\Gebruiker\Documents\GitHub\WorldCraft\v4.3\Part 6\WorldConstants.h(286,8): warning C4101: 'power': unreferenced local variable
+C:\Users\Gebruiker\Documents\GitHub\WorldCraft\v4.3\Part 6\human.h(28,19): warning C4244: 'initializing': conversion from 'const fp' to 'byte', possible loss of data
+C:\Users\Gebruiker\Documents\GitHub\WorldCraft\v4.3\Part 6\game.cpp(363,7): warning C4101: 'clientrect': unreferenced local variable
+C:\Users\Gebruiker\Documents\GitHub\WorldCraft\v4.3\Part 6\game.cpp(409,13): warning C4244: '=': conversion from 'time_t' to 'int', possible loss of data
+C:\Users\Gebruiker\Documents\GitHub\WorldCraft\v4.3\Part 6\game.cpp(678,14): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Gebruiker\Documents\GitHub\WorldCraft\v4.3\Part 6\game.cpp(679,14): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Gebruiker\Documents\GitHub\WorldCraft\v4.3\Part 6\game.cpp(974,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Gebruiker\Documents\GitHub\WorldCraft\v4.3\Part 6\game.cpp(1071,36): warning C4244: '=': conversion from 'seconds' to 'miliseconds', possible loss of data
+C:\Users\Gebruiker\Documents\GitHub\WorldCraft\v4.3\Part 6\game.cpp(1252,51): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Gebruiker\Documents\GitHub\WorldCraft\v4.3\Part 6\game.cpp(1252,37): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Gebruiker\Documents\GitHub\WorldCraft\v4.3\Part 6\game.cpp(1252,23): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Gebruiker\Documents\GitHub\WorldCraft\v4.3\Part 6\game.cpp(1361,30): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Gebruiker\Documents\GitHub\WorldCraft\v4.3\Part 6\game.cpp(1434,44): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Gebruiker\Documents\GitHub\WorldCraft\v4.3\Part 6\game.cpp(1434,30): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Gebruiker\Documents\GitHub\WorldCraft\v4.3\Part 6\game.cpp(1434,16): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  human.cpp
+C:\Users\Gebruiker\Documents\GitHub\WorldCraft\v4.3\Part 6\game.cpp(1736,16): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Gebruiker\Documents\GitHub\include\include\graphics.h(128,26): warning C4244: 'argument': conversion from 'cfp' to 'cbyte', possible loss of data
+C:\Users\Gebruiker\Documents\GitHub\include\include\hsf.h(32,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Gebruiker\Documents\GitHub\include\include\function.h(54,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Gebruiker\Documents\GitHub\WorldCraft\v4.3\Part 6\WorldConstants.h(509,2): warning C4091: 'static ': ignored on left of 'world' when no variable is declared
+C:\Users\Gebruiker\Documents\GitHub\WorldCraft\v4.3\Part 6\WorldConstants.h(378,7): warning C4101: 'total': unreferenced local variable
+C:\Users\Gebruiker\Documents\GitHub\WorldCraft\v4.3\Part 6\WorldConstants.h(286,8): warning C4101: 'power': unreferenced local variable
+C:\Users\Gebruiker\Documents\GitHub\WorldCraft\v4.3\Part 6\human.h(28,19): warning C4244: 'initializing': conversion from 'const fp' to 'byte', possible loss of data
+  Generating code
+  2 of 2527 functions (<0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    10 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Part 6.vcxproj -> C:\Users\Gebruiker\Documents\GitHub\WorldCraft\v4.3\Release\Project.exe

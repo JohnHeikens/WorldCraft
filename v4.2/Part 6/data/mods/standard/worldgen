@@ -1,0 +1,115 @@
+//sealevel, texture size
+world settings:
+64, 16
+
+//min, max, power, frequency, octave count
+//octave weights
+elevation noise:
+0, 1, 1, 0.001, 6
+1, .5f, .25f, .125f, .06125f, .036125f
+moisture noise:
+0, 1, 1, 0.001, 1
+1
+//0, 1, 1, 0.004,6
+//1, .75f, .33f, .33f, .33f, .5f
+biomes:
+	DEEP_OCEAN
+	OCEAN
+	BEACH
+	SCORCHED
+	BARE
+	TUNDRA
+	SNOW
+	TEMPERATE_DESERT
+	SHRUBLAND
+	TAIGA
+	GRASSLAND
+	TEMPERATE_DECIDUOUS_FOREST
+	TEMPERATE_RAIN_FOREST
+	SUBTROPICAL_DESERT
+	TROPICAL_SEASONAL_FOREST
+	TROPICAL_RAIN_FOREST
+
+biome colors:
+    rgb(0,0,128)		//deep ocean
+    rgb(0,0,255)		//ocean
+	rgb(255,255,0)		//beach
+	rgb(0,0,0)			//scorched
+	rgb(128,64,64)		//bare
+	rgb(128,255,128)	//tundra
+	rgb(255,255,255)	//snow
+	rgb(128,128,0)		//temperate desert
+	rgb(128,64,255)		//shrubland
+	rgb(64,255,128)		//taiga
+	rgb(64,255,64)		//grassland
+	rgb(128,255,0)		//temperate deciduous forest
+	rgb(255,128,0)		//temperate rain forest
+	rgb(192,255,0)		//subtropical desert
+	rgb(128,255,64)		//subtropical seasonal forest
+	rgb(0,128,0)		//tropical rain forest
+
+artifact name:
+oaktree, birchtree, palmtree, sprucetree, redflower, blueflower, yellowflower, cactusblock, pinetree, kelp
+artifact chance:
+//oak tree, birch tree, palm tree, spruce tree, red flower, blue flower, yellow flower, cactus, pine tree,	kelp
+	0,		0,			0,			0,			0,			0,			0,				0,		0,			50		//deepocean
+	0,		0,			0,			0,			0,			0,			0,				0,		0,			0		//ocean
+	0,		0,			30,			0,			0,			0,			0,				10,		0,			0		//beach
+	0,		0,			0,			0,			0,			0,			10,				0,		0,			0		//scorched
+	0,		0,			0,			2,			0,			10,			0,				2,		0,			0		//bare
+	2,		0,			0,			20,			0,			10,			10,				10,		0,			0		//tundra
+	0,		0,			0,			10,			5,			15,			10,				2,		40,			0		//snow
+	0,		0,			10,			0,			0,			0,			0,				30,		0,			0		//temperate desert
+	10,		0,			0,			0,			20,			0,			0,				0,		0,			0		//shrubland
+	10,		0,			0,			20,			20,			20,			20,				0,		20,			0		//taiga
+	5,		5,			10,			0,			10,			0,			0,				0,		0,			0		//grassland
+	30,		0,			20,			0,			40,			20,			10,				0,		0,			0		//temperate deciduous forest
+	20,		0,			20,			0,			30,			20,			10,				1,		0,			0		//temperate rain forest
+	20,		0,			20,			0,			30,			20,			10,				50,		0,			0		//subtropical desert
+	10,		20,			10,			0,			30,			20,			10,				0,		0,			0		//subtropical seasonal forest
+	40,		0,			20,			0,			10,			10,			0,				5,		0,			0		//tropical rain forest
+	
+top blocks:
+	Sand			//deepocean
+	Sand			//ocean
+    Sand			//beach
+    ScorchedStone	//scorched
+    Stone			//bare
+    Snow			//tundra
+    Snow			//snow
+    Sand			//temperate desert
+    Grass			//shrubland
+    Grass			//taiga
+    Grass			//grassland
+    Grass			//temperate deciduous forest
+    Grass			//temperate rain forest
+    Sand			//subtropical desert
+    Grass			//subtropical seasonal forest
+    Grass			//tropical rain forest
+	
+layer blocks:
+	Sand			//deepocean
+	Sand			//ocean
+	Sand			//beach
+	Stone			//scorched
+	Stone			//bare
+	Snow			//tundra
+	Stone			//snow
+	Sand			//temperate desert
+	Stone			//shrubland
+	Stone			//taiga
+	Dirt			//grassland
+	Dirt			//temperate deciduous forest
+	Dirt			//temperate rain forest
+	Sand			//subtropical desert
+	Dirt			//subtropical seasonal forest
+	Dirt			//tropical rain forest
+major blocks:
+//ground, ocean, air
+Stone, Water, Air
+	//other resources
+other files:
+	blocks
+	artifacts
+	biomes.bmp
+	hd3.bmp

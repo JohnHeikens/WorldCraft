@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\main">
+      <UniqueIdentifier>{ee5b25dd-91b4-4251-9fb1-16a327784673}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\light">
+      <UniqueIdentifier>{4ed76fb4-0451-45d3-9705-e515174fbf85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\action">
+      <UniqueIdentifier>{456ca3ae-8f74-4e5e-828e-fb7efb4cf92b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\chunk">
+      <UniqueIdentifier>{2f179d75-236f-45da-8d48-75173746dd46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\mob">
+      <UniqueIdentifier>{ace33928-73d0-49a0-94a9-25569e757aa8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\mob\pig">
+      <UniqueIdentifier>{d73ee328-46c3-4a14-a675-3f6326feaba4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\mob\human">
+      <UniqueIdentifier>{453051c5-1a91-48fd-832b-f6b1c320592a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\mob\fish">
+      <UniqueIdentifier>{6a3d1c8d-decf-408a-9952-5a3476f8f050}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\mob\parrot">
+      <UniqueIdentifier>{ec7cbf6b-59d2-4931-a312-51708c4b8430}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\main\game">
+      <UniqueIdentifier>{710aa7d5-7650-42c1-b489-14308c702ae8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\worldgen">
+      <UniqueIdentifier>{dd5a4da5-b631-4d4e-9993-c59a9bc1a279}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>Source Files\main</Filter>
+    </ClInclude>
+    <ClInclude Include="LightMap.h">
+      <Filter>Source Files\light</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionContainer.h">
+      <Filter>Source Files\action</Filter>
+    </ClInclude>
+    <ClInclude Include="Chunk.h">
+      <Filter>Source Files\chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldConstants.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mob.h">
+      <Filter>Source Files\mob</Filter>
+    </ClInclude>
+    <ClInclude Include="bodypart.h">
+      <Filter>Source Files\mob</Filter>
+    </ClInclude>
+    <ClInclude Include="pig.h">
+      <Filter>Source Files\mob\pig</Filter>
+    </ClInclude>
+    <ClInclude Include="mobs.h">
+      <Filter>Source Files\mob</Filter>
+    </ClInclude>
+    <ClInclude Include="human.h">
+      <Filter>Source Files\mob\human</Filter>
+    </ClInclude>
+    <ClInclude Include="cod.h">
+      <Filter>Source Files\mob\fish</Filter>
+    </ClInclude>
+    <ClInclude Include="parrot.h">
+      <Filter>Source Files\mob\parrot</Filter>
+    </ClInclude>
+    <ClInclude Include="gamemode.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="game.h">
+      <Filter>Source Files\main\game</Filter>
+    </ClInclude>
+    <ClInclude Include="modfunctions.h">
+      <Filter>Source Files\chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="hitbox.h">
+      <Filter>Source Files\mob</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Part 6.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Part 6.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Lightmap.cpp">
+      <Filter>Source Files\light</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionContainer.cpp">
+      <Filter>Source Files\action</Filter>
+    </ClCompile>
+    <ClCompile Include="Chunk.cpp">
+      <Filter>Source Files\chunk</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files\main</Filter>
+    </ClCompile>
+    <ClCompile Include="bodypart.cpp">
+      <Filter>Source Files\mob</Filter>
+    </ClCompile>
+    <ClCompile Include="pig.cpp">
+      <Filter>Source Files\mob\pig</Filter>
+    </ClCompile>
+    <ClCompile Include="mob.cpp">
+      <Filter>Source Files\mob</Filter>
+    </ClCompile>
+    <ClCompile Include="human.cpp">
+      <Filter>Source Files\mob\human</Filter>
+    </ClCompile>
+    <ClCompile Include="cod.cpp">
+      <Filter>Source Files\mob\fish</Filter>
+    </ClCompile>
+    <ClCompile Include="parrot.cpp">
+      <Filter>Source Files\mob\parrot</Filter>
+    </ClCompile>
+    <ClCompile Include="game.cpp">
+      <Filter>Source Files\main\game</Filter>
+    </ClCompile>
+    <ClCompile Include="modfunctions.cpp">
+      <Filter>Source Files\chunk</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

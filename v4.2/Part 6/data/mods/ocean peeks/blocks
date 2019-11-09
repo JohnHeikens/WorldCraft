@@ -1,0 +1,35 @@
+transparent block:
+water
+
+blocks:
+//block,		texture indices(side,top,bottom),block type,		opacity,	bounce multiplier,	raycast visible,	solid	draw all sides,	has air,	cull back faces,	is visible surrounded	air color				fogdistance
+Air, 			0,0,0,0,0,0,					Invisible,		1,			0,					false,				false,	false,			true,		false,				true,					rgb(.66,.78,1.0),		50
+Water,          0,0,0,0,0,0,			        Fluid,		0.95f,	    0,                  false,	            false,	true,	        false,	    false,	            true,	                rgb(0.5, .16, .22, .71),30
+Dirt,           32,0,32,0,32,0,			        Solid,			0,		    0,                  true,	            true,	true,	        false,	    true,	            false,	                rgb(.66,.78,1.0),        50
+Grass,          48,0,0,0,32,0,			        Solid,			0,		    0,                  true,	            true,	true,	        false,	    true,	            false,	                rgb(.66,.78,1.0),        50
+Leaves,         64,48,64,48,64,48,		        Transparent,	0.75f,	    0,                  true,	            true,	false,	        false,	    false,		        true,					rgb(.66,.78,1.0),		50
+Glass,          16,48,16,48,16,48,		        Transparent,	0.9f,	    0,                  true,	            true,	false,	        false,	    true,	            true,	                rgb(.66,.78,1.0),		50
+RedFlower,      192,0,0,0,0,0,			        Cross,			0.9f,	    0,                  true,	            false,	false,	        true,	    false,	            true,	                rgb(.66,.78,1.0),        50
+BlueFlower,     16,256,0,0,0,0,			        Cross,			0.9f,	    0,                  true,	            false,	false,	        true,	    false,	            true,	                rgb(.66,.78,1.0),        50
+YellowFlower,   208,0,0,0,0,0,			        Cross,			0.9f,	    0,                  true,	            false,	false,	        true,	    false,	            true,	                rgb(.66,.78,1.0),        50
+Tallgrass,      208,256,0,0,0,0,		        Cross,			0.85f,	    0,                  true,	            false,	false,	        true,	    false,	            true,	                rgb(.66,.78,1.0),        50
+Fire,           304,48,0,0,0,0,			        Cross,			1,		    0,                  true,	            false,	false,	        true,	    false,	            true,	                rgb(.66,.78,1.0),        50
+Lava,           176,288,176,288,176,288,        Fluid,			1,		    0,                  false,	            false,	true,	        false,	    false,	            true,	                rgb(153, 26, 0),         10
+GlowStone,      144,96,144,96,144,96,	        Solid,			1,		    0,                  true,	            true,	true,	        false,	    true,	            false,	                rgb(.66,.78,1.0),        50
+Sand,           32,16,32,16,32,16,		        Solid,			0,		    0,                  true,	            true,	true,	        false,	    true,	            false,	                rgb(.66,.78,1.0),        50
+Stone,          16,0,16,0,16,0,			        Solid,			0,		    0,                  true,	            true,	true,	        false,	    true,	            false,	                rgb(.66,.78,1.0),        50
+OakWood,        64,16,80,16,80,16,		        Solid,			0,		    0,                  true,	            true,	true,	        false,	    true,	            false,	                rgb(.66,.78,1.0),        50
+Ice,            48,64,48,64,48,64,		        Solid,			0,		    0,                  true,	            true,	true,	        false,	    true,	            false,	                rgb(.66,.78,1.0),        50
+Bedrock,        16,16,16,16,16,16,		        Solid,			0,		    0,                  true,	            true,	true,	        false,	    true,	            false,	                rgb(.66,.78,1.0),        50
+OakPlanks,      64,0,64,0,64,0,			        Solid,			0,		    0,                  true,	            true,	true,	        false,	    true,	            false,	                rgb(.66,.78,1.0),        50
+Bricks,         112,0,112,0,112,0,		        Solid,			0,		    0,                  true,	            true,	true,	        false,	    true,	            false,	                rgb(.66,.78,1.0),        50
+BookShelf,      48,32,80,16,80,16,		        Solid,			0,		    0,                  true,	            true,	true,	        false,	    true,	            false,	                rgb(.66,.78,1.0),        50
+Furnace,        208,48,224,48,224,48,	        Solid,			0,		    0,                  true,	            true,	true,	        false,	    true,	            false,	                rgb(.66,.78,1.0),        50
+Cobweb,         176,0,0,0,0,0,			        Cross,			0.9f,	    0,                  true,	            false,	false,	        true,	    false,	            true,	                rgb(.66,.78,1.0),        50
+ScorchedStone,  240,336,240,336,240,336,        Solid,			0,		    0,                  true,	            true,	true,	        false,	    true,	            false,	                rgb(.66,.78,1.0),        50
+Snow,           32,64,32,64,32,64,		        Solid,			0,		    0,                  true,	            true,	true,	        false,	    true,	            false,	                rgb(.66,.78,1.0),        50
+BirchWood,      80,112,304,256,304,256,	        Solid,			0,		    0,                  true,	            true,	true,	        false,	    true,	            false,	                rgb(.66,.78,1.0),        50
+BirchPlanks,    112,192,112,192,112,192,        Solid,			0,		    0,                  true,	            true,	true,	        false,	    true,	            false,	                rgb(.66,.78,1.0),        50
+PalmWood,       64,112,288,256,288,256,	        Solid,			0,		    0,                  true,	            true,	true,	        false,	    true,	            false,	                rgb(.66,.78,1.0),        50
+PalmPlanks,     96,192,96,192,96,192,	        Solid,			0,		    0,                  true,	            true,	true,	        false,	    true,	            false,	                rgb(.66,.78,1.0),        50
+CactusBlock,    96,64,80,64,80,64,		        Solid,			0,		    0,                  true,	            true,	true,	        false,	    true,	            false,	                rgb(.66,.78,1.0),        50

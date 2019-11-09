@@ -1,0 +1,53 @@
+//sealevel
+world settings:
+0
+
+//min, max, power, frequency, octave count
+//octave weights
+elevation noise:
+0, 1, 2, 0.004, 6
+1, .5f, .25f, .125f, .06125f, .036125f
+moisture noise:
+0, 1, 1, 0.004,6
+1, .75f, .33f, .33f, .33f, .5f
+biomes:
+	SCORCHED
+	BARE
+	TUNDRA
+	SNOW
+
+biome colors:
+	rgb(0,0,0)			//scorched
+	rgb(64,64,64)		//bare
+	rgb(0,255,0)		//tundra
+	rgb(255,255,255)	//snow
+
+artifact name:
+redflower, blueflower, yellowflower, house
+artifact chance:
+//red flower, blue flower, yellow flower, house
+	0,			0,			10,			0	//scorched
+	0,			10,			0,			10	//bare
+	0,			10,			10,			10	//tundra
+	5,			15,			10,			10	//snow
+	
+top blocks:
+    ScorchedStone	//scorched
+    Stone			//bare
+    Snow			//tundra
+    Snow			//snow
+	
+layer blocks:
+	Stone			//scorched
+	Stone			//bare
+	Snow			//tundra
+	Stone			//snow
+major blocks:
+	//ground, ocean, air
+Stone, Water, Air
+	//other resources
+other files:
+	blocks
+	artifacts
+	biomes.bmp
+	hd3.bmp
